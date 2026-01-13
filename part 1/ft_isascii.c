@@ -6,4 +6,3 @@ int ift_sascii(int c)
     }
     return (0);
 }
- 
