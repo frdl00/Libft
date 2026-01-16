@@ -1,4 +1,9 @@
-#include <stddef.h>
+/*
+verilen bir string içerisinde 'c' varsa
+onun pointerını (ilk bulduğu karakteri) (yani, bulduğu karakteri ve sonrasını döndürüyor)
+*/
+
+#include "libft.h"
 char *ft_strchr(const char *s, int c)
 {
     int i;

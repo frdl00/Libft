@@ -1,5 +1,8 @@
 //karakter sayısal bir değer ise 0 olmayan bir değer döndürür
-int ift_sdigit(int c)
+
+#include "libft.h"
+
+int ft_isdigit(int c)
 {
     if((c >= '0' && c <= '9'))
     {

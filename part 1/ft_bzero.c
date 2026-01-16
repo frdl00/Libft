@@ -21,7 +21,7 @@ int main(void)
 
     ft_bzero(arr, 5);
 
-    while(i<10)
+    while(i < 10)
     {
         printf("%c", arr[i]);
         i++;
