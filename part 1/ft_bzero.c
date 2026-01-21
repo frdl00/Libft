@@ -8,15 +8,16 @@ void ft_bzero(void *s, size_t n)
 
     while(i < n)
     {
-        p[i] = '\0';
+        p[i] = 't';
         i++; 
     }
 }
 
+#include <stdlib.h>
 #include <stdio.h>
 int main(void)
 {
-    char arr[10];
+    char arr[] = "asdfghjkli";
     int i =0;
 
     ft_bzero(arr, 5);

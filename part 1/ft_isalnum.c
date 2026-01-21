@@ -19,8 +19,7 @@ int ft_isalnum(int c)
 #include <stdio.h>
 int main() {
     printf("%d\n", ft_isalnum('0'));
-    
-    
+
     return 0;
 }
 

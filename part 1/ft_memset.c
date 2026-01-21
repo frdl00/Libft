@@ -47,7 +47,7 @@ void *ft_memset(void *s, int c, size_t n)
 
 int main(void)
 {
-    char *str = "turşum";
+    char str[] = "turşum";
     char c = 'f';
     int n = 2;
 
