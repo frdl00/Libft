@@ -5,7 +5,7 @@
 //char olursa 1 byte ielrler
 void *ft_memset(void *s, int c, size_t n)
 {
-    int i;
+   size_t i;
     i = 0;
 
     //void s pointerını fonskiyonda kullanmak için onu yeni bir char tipi değişkene atıyoruz

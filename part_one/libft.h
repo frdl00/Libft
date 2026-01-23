@@ -29,10 +29,9 @@ int ft_toupper(int c);
 
 /*
 sıkıntılı funcs
-memmove
-strlcat
-strlcpy
-strrchr
+- strlcat
+- memmove
+- strlcpy
 */
 
 #endif

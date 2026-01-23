@@ -1,6 +1,6 @@
 #include <ctype.h>
 
-int fT_tolower(int c)
+int ft_tolower(int c)
 {
     char a;
    if(65 <= c && c <= 90)

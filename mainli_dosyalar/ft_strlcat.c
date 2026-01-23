@@ -11,8 +11,8 @@ return = fatmanur
 #include <stdio.h>
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
-    int i;
-    int j;
+    size_t i;
+    size_t j;
 
     j=0;
     i=0;

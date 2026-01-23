@@ -2,9 +2,8 @@
 //strchr sadece string içinde karakter arıyor ve sonuna kadar arıyor fakat bunda veri itipi önemsiz ve sadece ilk n byte ı arıyor
 void *ft_memchr(const void *s, int c, size_t n)
 {
-    int i;
+    size_t i;
     unsigned char *p  = (unsigned char *)s;
-    unsigned char t = (unsigned char )c;
     i=0;
 
     while(i < n)
