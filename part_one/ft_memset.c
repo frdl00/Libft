@@ -1,5 +1,4 @@
- //verinin tipi ne olursa olsun memorye byte byte yazar
- #include <string.h>
+#include <string.h>
 //void sizeOf(void) plduğu için memory kaç byte birim alacağını bilmiyor
 //eğer int olsaydı 4 byte ilerlerdi
 //char olursa 1 byte ielrler
@@ -20,7 +19,7 @@ void *ft_memset(void *s, int c, size_t n)
 
     while(i < n)
     {
-        p[i] = c;
+        p[i] = (unsigned char *)c;
         i++;
     }
 

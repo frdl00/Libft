@@ -45,14 +45,26 @@ void *ft_memset(void *s, int c, size_t n)
 //     return 0;
 // }
 
+// int main(void)
+// {
+//     char str[] = "turşum";
+//     char c = 'f';
+//     int n = 2;
+
+//     char *result = ft_memset(str, c, n);
+//     printf("%s\n", result);
+// }
+
 int main(void)
 {
-    char str[] = "turşum";
-    char c = 'f';
-    int n = 2;
+    char str[5] = "asdfgh";  // static bellek tahisi
 
-    char *result = ft_memset(str, c, n);
-    printf("%s\n", result);
+    char *bla = ft_memset(str, 'A', 5); // dinamik bellek tahisi
+
+    printf("%s\n", bla);
+    printf("%s\n", str);
+
+
 }
 
 
