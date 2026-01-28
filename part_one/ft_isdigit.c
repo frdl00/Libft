@@ -1,12 +1,22 @@
-//karakter sayısal bir değer ise 0 olmayan bir değer döndürür
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/28 12:50:55 by fardal            #+#    #+#             */
+/*   Updated: 2026/01/28 12:51:14 by fardal           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if((c >= '0' && c <= '9'))
-    {
-        return (1);
-    }
-    return (0);
+	if ((c >= '0' && c <= '9'))
+	{
+		return (1);
+	}
+	return (0);
 }

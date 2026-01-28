@@ -1,5 +1,3 @@
-
-
 #ifndef LIBFT
 #define LIBFT
 

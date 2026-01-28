@@ -1,22 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/28 12:20:18 by fardal            #+#    #+#             */
+/*   Updated: 2026/01/28 12:22:56 by fardal           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-verilen bir string içerisinde 'c' varsa
-onun pointerını (son bulduğu karakteri) (yani, bulduğu karakteri ve sonrasını döndürüyor)
-*/
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
-    i = ft_strlen((char *)s);   // type casting (veri tipi değiştirme)
+	int	i;
 
-    while (i >= 0)
-    {
-        //
-        if(s[i] == (char)c)
-        //
-            return((char *)&s[i]);
-        i--;
-    }
-    return (NULL);
+	i = ft_strlen((char *)s);
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i--;
+	}
+	return (NULL);
 }

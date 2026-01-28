@@ -1,11 +1,22 @@
-//karakter alfabetikse 0 olmayan bir değer döndürür
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/28 12:51:41 by fardal            #+#    #+#             */
+/*   Updated: 2026/01/28 13:05:44 by fardal           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-int ft_isalpha(int c)
+
+int	ft_isalpha(int c)
 {
-    if((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-    {
-        return (1);
-    }
-    return (0);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	{
+		return (1);
+	}
+	return (0);
 }

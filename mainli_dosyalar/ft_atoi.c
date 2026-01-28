@@ -7,7 +7,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-
+	
+	//başta boşlukları atlar sonra en fazla bir tane işaret kabul ede -+, bu işarettne hemen sonra rakam gelmek zorunda ve bu kural bozulursa 0 öndürür
     //yazdırılmayacak karakterleri geç 
     //(boşluk gibi outputta yok sayılacak karakterler)
     //boşluk sayılan karakterler : /t, /n, /v, /f, /r, ' '(space)

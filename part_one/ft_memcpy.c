@@ -1,22 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/28 12:43:21 by fardal            #+#    #+#             */
+/*   Updated: 2026/01/28 12:45:45 by fardal           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-//eğer kopyalanacak ve yapıştırılacak alan çakışıyorsa bu fonksiyon hata verebilir bu durumlarda memmove kullnaılmalı
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    unsigned char *dest1 = (unsigned char *)dest;
-    unsigned char *src1 = (unsigned char *)src;
-    size_t i ;
-    i = 0;
+	size_t			i;
+	unsigned char	*dest1;
+	unsigned char	*src1;
 
-    //kontrol: iki string de null ise işlem yapamazmışım
-    if(dest1 == NULL && src1 == NULL)
-        return (NULL);
-    while(i < n)
-    {
-        dest1[i] = src1[i];
-        i++;
-    }
-    return dest1;
+	dest1 = (unsigned char *)dest;
+	src1 = (unsigned char *)src;
+	i = 0;
+	if (dest1 == NULL && src1 == NULL)
+		return (NULL);
+	while (i < n)
+	{
+		dest1[i] = src1[i];
+		i++;
+	}
+	return (dest1);
 }

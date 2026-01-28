@@ -1,16 +1,25 @@
-//bir karakter harf ya da rakam mı diye kontrol ediyor (isalpha ve isdigit)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/28 12:52:09 by fardal            #+#    #+#             */
+/*   Updated: 2026/01/28 13:05:33 by fardal           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-// alfabetik ve rakam hariç heeeeer şey 0
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    int i;
-    i =0;
+	int	i;
 
-    if(ft_isalpha(c) || ft_isdigit(c))
-    {
-        return (1);
-    }
-    return (0);
+	i = 0;
+	if (ft_isalpha(c) || ft_isdigit(c))
+	{
+		return (1);
+	}
+	return (0);
 }
