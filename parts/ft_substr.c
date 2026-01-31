@@ -17,9 +17,9 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 }
 #include <stdio.h>
 
-int main()
-{
-	char *bla = "bu bilgisayarı beyinsizin teki kullanmıyor.";
-	char *son = ft_substr(bla, 7, 10);
-	printf("%s" , son);
-}
+// int main()
+// {
+// 	char *bla = "bu bilgisayarı beyinsizin teki kullanmıyor.";
+// 	char *son = ft_substr(bla, 7, 10);
+// 	printf("%s" , son);
+// }

@@ -12,6 +12,7 @@ char *ft_strchr(const char *s, int c)
 	while(s[i])
 	{
 		if(s[i] == (char)c)
+		//niye & eklemişim
 			return((char *)&s[i]);
 		i++;
 	}

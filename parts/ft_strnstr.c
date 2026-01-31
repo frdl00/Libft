@@ -6,7 +6,7 @@
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 12:23:12 by fardal            #+#    #+#             */
-/*   Updated: 2026/01/28 13:03:02 by fardal           ###   ########.fr       */
+/*   Updated: 2026/01/31 12:42:02 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			j++;
 		}
 		if (little[j] == '\0')
-			return ((char *)&big[i]);
+			return ((char *) & big[i]);
 		i++;
 	}
 	return (NULL);
