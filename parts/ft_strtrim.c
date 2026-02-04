@@ -46,16 +46,16 @@ char *ft_strtrim(char const *s1, char const *set)
 	return (copy);
 }
 
-#include <stdio.h>
-int main(int argc, char const *argv[])
-{
-	char *s1 = "trallallalla";
-	char *set = "tral";
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+// 	char *s1 = "trallallalla";
+// 	char *set = "tral";
 
-	printf("%s\n", ft_strtrim(s1, set));
+// 	printf("%s\n", ft_strtrim(s1, set));
 	
-	return 0;
-}
+// 	return 0;
+// }
 
 /*
 char *s1 = "dededeabdullahdedede"

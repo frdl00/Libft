@@ -6,7 +6,7 @@
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:06:13 by fardal            #+#    #+#             */
-/*   Updated: 2026/01/30 17:14:21 by fardal           ###   ########.fr       */
+/*   Updated: 2026/02/04 16:03:57 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <fcntl.h>
 
 
 int		ft_atoi(const char *str);
