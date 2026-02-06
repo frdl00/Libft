@@ -6,7 +6,7 @@
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 12:12:18 by fardal            #+#    #+#             */
-/*   Updated: 2026/01/28 12:19:49 by fardal           ###   ########.fr       */
+/*   Updated: 2026/02/06 19:36:36 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 int	ft_tolower(int c)
 {
-	char	a;
-
-	if (65 <= c && c <= 90)
+	if (c >= 65 && c <= 90)
 	{
 		c = c + 32;
 	}
-	a = c;
-	return (a);
+	return (c);
 }

@@ -18,12 +18,12 @@ char *ft_strjoin(char const *s1, char const *s2)
 	return (join);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-	char *bla = "bu bilgisayarı beyinsizin teki kullanmıyor.";
-	char *alb = "parkın birinde oturup hiç kouşmadan düşünmem gerek.";
-	char *son = ft_strjoin(bla, alb);
-	printf("%s", son);
-}
+// int main()
+// {
+// 	char *bla = "bu bilgisayarı beyinsizin teki kullanmıyor.";
+// 	char *alb = "parkın birinde oturup hiç kouşmadan düşünmem gerek.";
+// 	char *son = ft_strjoin(bla, alb);
+// 	printf("%s", son);
+// }
