@@ -6,7 +6,7 @@
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 12:31:05 by fardal            #+#    #+#             */
-/*   Updated: 2026/01/31 12:51:13 by fardal           ###   ########.fr       */
+/*   Updated: 2026/02/07 16:49:49 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,18 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (char)c)
-			return ((char *) & s[i]);
+			return ((char *)&s[i]);
 		i++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 	//burada neden & koymuşum
-		return ((char *) & s[i]);
+		return ((char *)&s[i]);
 	return (NULL);
 }
+
+/* TEST
+ft_strchr(0x62bcb79fb020: "teste", 1024: '\0'):
+expected: 0x62bcb79fb025
+yours: (nil)
+
+*/

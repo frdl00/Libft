@@ -1,28 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/07 17:15:56 by fardal            #+#    #+#             */
+/*   Updated: 2026/02/07 17:18:37 by fardal           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "libft.h"
 
-int ft_word_count(char const *s, char c)
+int	ft_word_count(char const *s, char c)
 {
 	int i;
 	int counter;
 
 	i = 0;
 	counter = 0;
-	while(s[i])
+	while (s[i])
 	{
-		while(s[i] == c)
+		while (s[i] == c)
 			i++;
 
-		if(s[i])
+		if (s[i])
 			counter++;
 
-		while(s[i] != c && s[i] != '\0')
+		while (s[i] != c && s[i] != '\0')
 			i++;
 	}
 	return (counter);
 }
 
-char **split_add(char const *s, char c, char **splited)
+char	**split_add(char const *s, char c, char **splited)
 {
 	int i;
 	int j;
@@ -30,15 +42,15 @@ char **split_add(char const *s, char c, char **splited)
 
 	i = 0;
 	j = 0;
-	while(s[i])
+	while (s[i])
 	{
-		while(s[i] == c)
+		while (s[i] == c)
 			i++;
 
 		if (s[i] == '\0')
 			break;
 		save_i = i;
-		while(s[i] != c && s[i] != '\0')
+		while (s[i] != c && s[i] != '\0')
 			i++;
 		
 		splited[j] = ft_substr(s, save_i, i - save_i);

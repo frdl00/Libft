@@ -6,7 +6,7 @@
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 12:39:36 by fardal            #+#    #+#             */
-/*   Updated: 2026/01/28 12:43:10 by fardal           ###   ########.fr       */
+/*   Updated: 2026/02/07 16:46:22 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*dest1;
 	unsigned char	*src1;
 
+	if (!dest && !src)
+		return (NULL);
 	dest1 = (unsigned char *)dest;
 	src1 = (unsigned char *)src;
 	i = 0;
