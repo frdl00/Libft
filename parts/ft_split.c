@@ -6,7 +6,7 @@
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 17:15:56 by fardal            #+#    #+#             */
-/*   Updated: 2026/02/07 17:18:37 by fardal           ###   ########.fr       */
+/*   Updated: 2026/02/09 18:02:08 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,16 @@ char	**split_add(char const *s, char c, char **splited)
 	{
 		while (s[i] == c)
 			i++;
-
 		if (s[i] == '\0')
 			break;
 		save_i = i;
 		while (s[i] != c && s[i] != '\0')
 			i++;
-		
 		splited[j] = ft_substr(s, save_i, i - save_i);
-		if (!splited[j]) {
-			while (splited[j]) {
+		if (!splited[j])
+		{
+			while (splited[j])
+			{
 				free(splited[j]);
 				j++;
 			}
@@ -75,7 +75,6 @@ char **ft_split(char const *s, char c)
 	splited = malloc((sizeof(char *)) * (ft_word_count(s , c) + 1));	// char pointerlık yer ayırıyor
 	if(!splited)
 		return (NULL);
-
 	return (split_add(s, c, splited));
 }
 

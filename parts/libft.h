@@ -6,7 +6,7 @@
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:06:13 by fardal            #+#    #+#             */
-/*   Updated: 2026/02/04 16:03:57 by fardal           ###   ########.fr       */
+/*   Updated: 2026/02/11 14:31:40 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,18 @@ void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
+
+
+// node = eleman
+typedef struct s_list
+{
+	void 			*content;	// node'ın içindeki değeri tutuyor
+	struct s_list 	*next;	// bir sonraki node'ın adresini tutuyor (eğer son node ise next NULL oluyor)
+}	t_list;
+
+t_list *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
+int ft_lstsize(t_list *lst);
+
 
 #endif

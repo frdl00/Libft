@@ -6,30 +6,27 @@
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 17:14:53 by fardal            #+#    #+#             */
-/*   Updated: 2026/02/07 17:16:37 by fardal           ###   ########.fr       */
+/*   Updated: 2026/02/09 17:59:07 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//daha kontrol edilmedi
 #include "libft.h"
-//başka ne kontrolü var oooooofffffff sıkıldım da biraz ama neyse
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t str_len;
-	// len = ft_strlen(s[start]) + 1;
-	//mallocta char pointerı kullaman lazım char * şeklinde
+	char *sub;
+
+	str_len = ft_strlen(s);
 	if (!s)
 		return (NULL);
-//mö
-	str_len = ft_strlen(s);
+
 	if (start >= str_len)
 		return (ft_strdup(""));
-//mö
+
 	if (len > str_len - start)
         len = str_len - start;
-	
-	char *sub = malloc(len + 1);
+	sub = malloc(len + 1);
 
 	if(!sub)
 		return (NULL);
