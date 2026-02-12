@@ -1,4 +1,5 @@
 #include "libft.h"
+// listenin size'ını döndürüyor
 int ft_lstsize(t_list *lst)
 {
 	int lst_size;
@@ -17,21 +18,21 @@ int ft_lstsize(t_list *lst)
 3. node^ları listeye ekle
 4. ft_lstsize() çağır
 */
-#include <stdio.h>
-int main()
-{
-	t_list *lst = NULL;
+// #include <stdio.h>
+// int main()
+// {
+// 	t_list *lst = NULL;
 
-	t_list *node1 = ft_lstnew("sayi1");
-	t_list *node2 = ft_lstnew("sayi2");
-	t_list *node3 = ft_lstnew("sayi3");
+// 	t_list *node1 = ft_lstnew("sayi1");
+// 	t_list *node2 = ft_lstnew("sayi2");
+// 	t_list *node3 = ft_lstnew("sayi3");
 
-	ft_lstadd_front(&lst, node1);
-	ft_lstadd_front(&lst, node2);
-	ft_lstadd_front(&lst, node3);
+// 	ft_lstadd_front(&lst, node1);
+// 	ft_lstadd_front(&lst, node2);
+// 	ft_lstadd_front(&lst, node3);
 
-	int result = ft_lstsize(lst);
-	printf("lst size: %d\n", result);
-}
+// 	int result = ft_lstsize(lst);
+// 	printf("lst size: %d\n", result);
+// }
 
 

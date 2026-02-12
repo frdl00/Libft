@@ -1,4 +1,5 @@
 #include "libft.h"
+// BİR NODE'u LİSTENİN BAŞINA EKLİYOR
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;

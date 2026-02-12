@@ -1,4 +1,5 @@
 #include "libft.h"
+// verilen content değeri ile YENİ BİR NODE OLUŞTURUYOR.
 t_list *ft_lstnew(void *content)
 {
 	t_list *new_node;
