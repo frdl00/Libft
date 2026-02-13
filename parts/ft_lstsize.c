@@ -13,7 +13,7 @@ int ft_lstsize(t_list *lst)
 	return (lst_size);
 }
 /*
-1. boş bir lliste oluştur
+1. boş bir liste oluştur
 2. üç tane node (eleman) oluştur
 3. node^ları listeye ekle
 4. ft_lstsize() çağır
