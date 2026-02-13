@@ -17,9 +17,9 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
 	*lst = NULL;
 }
 
-void del(void *content) {
-	free(content);
-}
+// void del(void *content) {
+// 	free(content);
+// }
 
 // #include <stdio.h>
 // int main(int argc, char const *argv[])

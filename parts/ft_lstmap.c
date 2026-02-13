@@ -29,62 +29,59 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
         //neden  new_node u kontrol ediyoum da new_contenti etmiyorum
         if(!new_node)
         {
-            del();
-        lst = lst->next;
+            del(new_node->content);
         }
-
-         ft_lstadd_back(&new_list, new_node);
-
+        ft_lstadd_back(&new_list, new_node);
+        lst = lst->next;
     }
-
     return (new_list);
 }
 
-void *f(void *content)
-{
-    char *str;
-    char *new;
-    int i;
+// void *f(void *content)
+// {
+//     char *str;
+//     char *new;
+//     int i;
 
-    str = (char *)content;
-    new = ft_strdup(str);
+//     str = (char *)content;
+//     new = ft_strdup(str);
 
-    if(!new)
-        return NULL;
-    i = 0;
-    while(new[i])
-    {
-        new[i] = ft_toupper(new[i]);
-		i++;
-    }
-    return (new);
-}
+//     if(!new)
+//         return NULL;
+//     i = 0;
+//     while(new[i])
+//     {
+//         new[i] = ft_toupper(new[i]);
+// 		i++;
+//     }
+//     return (new);
+// }
 
-void del(void *content)
-{
-    free(content);
-}
+// void del(void *content)
+// {
+//     free(content);
+// }
 
-int main()
-{
-    t_list	*lst;
-	t_list	*new_lst;
-	t_list	*tmp;
+// int main()
+// {
+//     t_list	*lst;
+// 	t_list	*new_lst;
+// 	t_list	*tmp;
 
-    lst = ft_lstnew(ft_strdup("hello"));
-    ft_lstadd_back(&lst, ft_lstnew(ft_strdup("world")));
+//     lst = ft_lstnew(ft_strdup("hello"));
+//     ft_lstadd_back(&lst, ft_lstnew(ft_strdup("world")));
 
-    new_lst = ft_lstmap(lst, f, del);
+//     new_lst = ft_lstmap(lst, f, del);
 
-    tmp = new_lst;
-    while(tmp)
-    {
-        printf("%s\n", (char *)tmp->content);
-		tmp = tmp->next;
-    }
+//     tmp = new_lst;
+//     while(tmp)
+//     {
+//         printf("%s\n", (char *)tmp->content);
+// 		tmp = tmp->next;
+//     }
 
-    ft_lstclear(&lst, del);
-	ft_lstclear(&new_lst, del);
+//     ft_lstclear(&lst, del);
+// 	ft_lstclear(&new_lst, del);
 
-	return (0);
-}
+// 	return (0);
+// }
