@@ -37,9 +37,11 @@ int	len_of_number(int n)
 char *ft_itoa(int n)
 {
 	char *str;
+	int i;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
+	i = 0;
 	str = malloc(len_of_number(n) + 1);
 	if (!str)
 	return (NULL);
