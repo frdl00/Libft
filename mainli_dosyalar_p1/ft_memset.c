@@ -68,20 +68,19 @@ int main(void)
 }
 
 //intli main şeysi
-// int main(void)
-// {
-//     int d = 0;
-//     unsigned int sayi = 2020;
+int main(void)
+{
+    int d = 0;
+    unsigned int sayi = 2020;
 
-//     unsigned int temp = (unsigned int)sayi;
-//     unsigned char *s = (unsigned char *)&d;
+    unsigned int temp = (unsigned int)sayi;
+    unsigned char *s = (unsigned char *)&d;
 
-// 	for (int i=0; i < sizeof(int); i++) {
-// 		ft_memset(s + i, temp % 256, 1);
-//         temp /= 256;
-// 	}
-//     printf("%d\n", d);
-//     return (0);
-// }
-
+	for (int i=0; i < sizeof(int); i++) {
+		ft_memset(s + i, temp % 256, 1);
+        temp /= 256;
+	}
+    printf("%d\n", d);
+    return (0);
+}
 

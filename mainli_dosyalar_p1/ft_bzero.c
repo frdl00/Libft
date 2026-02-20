@@ -1,5 +1,5 @@
 #include <strings.h>
-
+//str ye n kadar 0 
 void ft_bzero(void *s, size_t n)
 {
     unsigned char *p = (unsigned char *) s;
@@ -8,13 +8,14 @@ void ft_bzero(void *s, size_t n)
 
     while(i < n)
     {
-        p[i] = 't';
+        p[i] = '\0';
         i++; 
     }
 }
 
 #include <stdlib.h>
 #include <stdio.h>
+
 int main(void)
 {
     char arr[] = "asdfghjkli";

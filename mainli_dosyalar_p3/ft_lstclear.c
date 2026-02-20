@@ -2,8 +2,10 @@
 //bir listenin hem içeriğini hem nodeları siler
 void ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *node = *lst;
-	t_list *tmp;
+	t_list	*node;
+	t_list	*tmp;
+
+	node = *lst;
 	while(node)
 	{
 		tmp = node->next;

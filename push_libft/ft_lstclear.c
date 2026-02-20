@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 12:10:39 by fardal            #+#    #+#             */
-/*   Updated: 2026/02/06 19:35:01 by fardal           ###   ########.fr       */
+/*   Created: 2026/02/16 18:58:32 by fardal            #+#    #+#             */
+/*   Updated: 2026/02/20 09:39:38 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (c >= 97 && c <= 122)
+	t_list	*node;
+	t_list	*tmp;
+
+	node = *lst;
+	while (node)
 	{
-		c = c - 32;
+		tmp = node->next;
+		del(node->content);
+		free(node);
+		node = tmp;
 	}
-	return (c);
+	*lst = NULL;
 }

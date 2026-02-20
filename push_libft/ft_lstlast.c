@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/07 17:16:01 by fardal            #+#    #+#             */
-/*   Updated: 2026/02/07 17:22:37 by fardal           ###   ########.fr       */
+/*   Created: 2026/02/16 19:05:12 by fardal            #+#    #+#             */
+/*   Updated: 2026/02/20 09:46:17 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-fd'ye stringi yazıyor (outputu dosyaya/fd)
-*/
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int i;
-	
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
-
-// int main()
-// {
-// 	char s[] = "salak";
-// 	int fd = open("fardal.txt", O_WRONLY);
-// 	ft_putstr_fd(s, fd);
-// }
-

@@ -6,7 +6,7 @@
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:06:13 by fardal            #+#    #+#             */
-/*   Updated: 2026/02/13 19:06:54 by fardal           ###   ########.fr       */
+/*   Updated: 2026/02/20 10:34:46 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
-# include <fcntl.h>
+
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -40,7 +39,6 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
-
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -62,7 +60,7 @@ typedef struct s_list
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst)
+int		ft_lstsize(t_list *lst);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));

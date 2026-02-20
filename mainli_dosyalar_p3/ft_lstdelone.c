@@ -1,10 +1,14 @@
 #include "libft.h"
 // bir nod u parametre olarak alıp contentini siliyor, sonra node un kendisni free ediyor
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del(lst->content);
-	free(lst);
+	if (lst && del && lst->content)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }
+
 
 // void del(void *content) {
 // 	free(content);

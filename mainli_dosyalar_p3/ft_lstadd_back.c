@@ -16,7 +16,6 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 	node->next = new;
 }
 
-
 // #include <stdio.h>
 // int main()
 // {

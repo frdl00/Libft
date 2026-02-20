@@ -1,45 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/07 17:14:35 by fardal            #+#    #+#             */
-/*   Updated: 2026/02/07 17:21:47 by fardal           ###   ########.fr       */
+/*   Created: 2026/02/07 17:15:25 by fardal            #+#    #+#             */
+/*   Updated: 2026/02/20 10:07:28 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	int		i;
+	char	*result;
 
-	if (n < 0)
+	i = 0;
+	result = malloc(ft_strlen(s) + 1);
+	if (!result)
+		return (NULL);
+	while (s[i])
 	{
-		ft_putchar_fd('-', fd);
-		n = -n;
+		result[i] = f(i, s[i]);
+		i++;
 	}
-	if (n  == -2147483648)
-	{
-		write (fd, "2147483648", 10);
-		return;
-	}
-	if (n < 10)
-	{
-		ft_putchar_fd(n + '0', fd);
-	}
-
-	if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
+	result[i] = '\0';
+	return (result);
 }
-
-// int main()
-// {
-// 	int n  = -2147483648;
-// 	int fd = open("fardal.txt", O_WRONLY);
-// 	ft_putnbr_fd(n, fd);
-// }

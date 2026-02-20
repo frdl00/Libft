@@ -6,7 +6,7 @@
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 17:15:56 by fardal            #+#    #+#             */
-/*   Updated: 2026/02/09 18:02:08 by fardal           ###   ########.fr       */
+/*   Updated: 2026/02/20 09:53:56 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,19 @@ int	ft_word_count(char const *s, char c)
 	return (counter);
 }
 
+void	ft_free(char **str)
+{
+	int	idx;
+
+	idx = 0;
+	while (str[idx])
+	{
+		free(str[idx]);
+		idx++;
+	}
+	free(str);
+}
+
 char	**split_add(char const *s, char c, char **splited)
 {
 	int	i;
@@ -51,12 +64,7 @@ char	**split_add(char const *s, char c, char **splited)
 		splited[j] = ft_substr(s, save_i, i - save_i);
 		if (!splited[j])
 		{
-			while (splited[j])
-			{
-				free(splited[j]);
-				j++;
-			}
-			free(splited);
+			ft_free(splited);
 			return (NULL);
 		}
 		j++;

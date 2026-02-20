@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 12:52:50 by fardal            #+#    #+#             */
-/*   Updated: 2026/01/28 13:04:48 by fardal           ###   ########.fr       */
+/*   Created: 2026/01/28 12:33:00 by fardal            #+#    #+#             */
+/*   Updated: 2026/02/20 10:06:16 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*p;
 	size_t			i;
+	unsigned char	*p;
 
-	p = (unsigned char *) s;
 	i = 0;
+	p = (unsigned char *) s;
 	while (i < n)
 	{
-		p[i] = '\0';
+		p[i] = (unsigned char) c;
 		i++;
 	}
+	return (s);
 }

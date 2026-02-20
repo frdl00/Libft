@@ -4,18 +4,17 @@ int	ft_atoi(const char *str)
 	int	sign;
 	int	result;
 
-	i = 0;
+	i = 0; //strnin indexi
 	sign = 1;
 	result = 0;
-	
-	//başta boşlukları atlar sonra en fazla bir tane işaret kabul ede -+, bu işarettne hemen sonra rakam gelmek zorunda ve bu kural bozulursa 0 öndürür
+	//bu işaretine hemen sonra rakam gelmek zorunda ve bu kural bozulursa 0 öndürür
     //yazdırılmayacak karakterleri geç 
     //(boşluk gibi outputta yok sayılacak karakterler)
     //boşluk sayılan karakterler : /t, /n, /v, /f, /r, ' '(space)
 	while ((str[i] == '\t') || (str[i] == '\n') || (str[i] == '\v') 
     || (str[i] == '\f') || (str[i] == '\r') || (str[i] == ' '))
 	{
-		i++;
+		i++; // karakter unorintable ise işem yapmadan geç
 	}
 
     //işaret kontrolü (pozitifse yok say, negatifse sayıyı -1 ile çarp)(ama sadece bir tane işareti say geri kalanını atlasın)
@@ -44,7 +43,7 @@ int	ft_atoi(const char *str)
 
 int main(void)
 {
-	const char bla[] = "-4-3456";
+	const char bla[] = "-434a56";
 	int alb = ft_atoi(bla);
 	int alb2 = atoi(bla);
 

@@ -10,56 +10,65 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
 int	ft_word_count(char const *s, char c)
 {
-	int i;
-	int counter;
+	int i;//indexler arasında gezmek için
+	int counter; //kelime sayısını tutmak için
 
 	i = 0;
 	counter = 0;
 	while (s[i])
 	{
 		while (s[i] == c)
-			i++;
+			i++;//baştaki ayraçları görmezden gel
 
 		if (s[i])
-			counter++;
+			counter++;//ayraç dışında gördüğün ilk karakteri kelimenin başlangıcı olarak gör ve co8nterı 1 arttır
 
 		while (s[i] != c && s[i] != '\0')
-			i++;
+			i++;//kelimenin içinde olduğun sürece indexi arttır sayaaç dokunma
 	}
-	return (counter);
+	return (counter); 
+}
+
+void	ft_free(char **str)
+{
+	int	idx;
+
+	idx = 0;
+	while (str[idx])
+	{
+		free(str[idx]);
+		idx++;
+	}
+	free(str);
 }
 
 char	**split_add(char const *s, char c, char **splited)
 {
-	int i;
-	int j;
+	int i;//s'nin sayacı
+	int j; //splited'in sayacı
 	int save_i;
 
 	i = 0;
 	j = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
+		while (s[i] == c)//ayraçları atla
 			i++;
 		if (s[i] == '\0')
-			break;
-		save_i = i;
+			break;//eğer s dizisi boşsa döngüden çık
+		save_i = i;//tüm ayraçları atladıktan sonra gördüğün ilk
+            //karakteri kelimenin başlangıç indexi olarak kaydet
+
 		while (s[i] != c && s[i] != '\0')
 			i++;
 		splited[j] = ft_substr(s, save_i, i - save_i);
 		if (!splited[j])
 		{
-			while (splited[j])
-			{
-				free(splited[j]);
-				j++;
-			}
-			free(splited);
+			ft_free(splited);
 			return (NULL);
 		}
 		j++;
@@ -78,23 +87,16 @@ char **ft_split(char const *s, char c)
 	return (split_add(s, c, splited));
 }
 
+#include <stdio.h>
+int main(int argc, char const *argv[])
+{
+	char **str = ft_split("abdllah tursun   ajajaj", ' ');
 
-// #include <stdio.h>
+	printf("%s\n", str[0]);
+	printf("%s\n", str[1]);
+	printf("%s\n", str[2]);
 
-// int main(int argc, char const *argv[])
-// {
-// 	char **result_array;
 
-// 	result_array = ft_split("      ala   bla    lab     ", ' ');
-
-// 	// array yazdırma döngüsü
-// 	int i = 0;
-// 	while (result_array[i]) {
-// 		if (result_array[i+1])
-// 			printf("index: [%d] -> %s\n" ,i, result_array[i]);
-// 			free(result_array[i]);
-// 		i++;
-// 	}
-// 	free(result_array);
-// 	return 0;
-// }
+	ft_free(str);
+	return 0;
+}

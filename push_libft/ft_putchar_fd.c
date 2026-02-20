@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardal <fardal@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/16 19:05:12 by fardal            #+#    #+#             */
-/*   Updated: 2026/02/16 19:05:15 by fardal           ###   ########.fr       */
+/*   Created: 2026/02/07 17:12:59 by fardal            #+#    #+#             */
+/*   Updated: 2026/02/20 10:01:13 by fardal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_putchar_fd(char c, int fd)
 {
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	write(fd, &c, 1);
 }
