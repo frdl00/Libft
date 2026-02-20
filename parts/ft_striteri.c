@@ -11,29 +11,15 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int i;
-	i = 0;
+	int	i;
 
+	i = 0;
 	while (s[i])
 	{
 		f(i, &s[i]);
 		i++;
 	}
 }
-
-// void	next_alpha(unsigned int i, char *c)
-// {
-// 	*c =  *c + i;
-// }
-
-// int main(int argc, char const *argv[])
-// {
-// 	char str[] = "aaa";
-// 	ft_striteri(str, next_alpha);
-// 	printf("%s\n", str);
-
-// 	return 0;
-// }

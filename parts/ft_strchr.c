@@ -24,14 +24,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if ((char)c == '\0')
-	//burada neden & koymuşum
 		return ((char *)&s[i]);
 	return (NULL);
 }
-
-/* TEST
-ft_strchr(0x62bcb79fb020: "teste", 1024: '\0'):
-expected: 0x62bcb79fb025
-yours: (nil)
-
-*/

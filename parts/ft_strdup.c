@@ -14,13 +14,11 @@
 
 char	*ft_strdup(const char *s)
 {
-	//strlen kullandığında sondaki null karakterini saymadığı için +1 ekle
-	//zaten char 1 byte olduğu iin mallocta tekrar sizeof kullanmana gerek yok
-	char *cpy = malloc((ft_strlen(s) + 1));
+	char	*cpy;
 
+	cpy = malloc((ft_strlen(s) + 1));
 	if (!cpy)
-		return NULL;
-		
+		return (NULL);
 	ft_memcpy(cpy, s, ft_strlen(s) + 1);
 	return (cpy);
 }

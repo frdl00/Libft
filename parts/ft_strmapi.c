@@ -15,33 +15,18 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
-	
+	int		i;
+	char	*result;
+
 	i = 0;
-	char *result = malloc(ft_strlen(s) + 1);
+	result = malloc(ft_strlen(s) + 1);
 	if (!result)
 		return (NULL);
-
 	while (s[i])
 	{
-		result[i] = f(i , s[i]);
+		result[i] = f(i, s[i]);
 		i++;
 	}
 	result[i] = '\0';
 	return (result);
 }
-
-// char	next_alpha(unsigned int i, char c)
-// {
-// 	char result =  c + i;
-// 	return (result);
-// }
-
-// int main(int argc, char const *argv[])
-// {
-// 	char *result = ft_strmapi("cba", next_alpha);
-// 	printf("%s\n", result);
-
-
-// 	return 0;
-// }

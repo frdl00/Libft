@@ -27,20 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int main(int argc, char const *argv[])
-// {
-// 	printf("%d\n", ft_strncmp("test\200", "test\0", 6));
-// 	return 0;
-// }
-
-
-/* TESTS
-ft_print_result(ft_strncmp("test\200", "test\0", 6));
-Expected (cat -e test11.output):
-1
-Your result (cat -e user_output_test11):
--1
-
-*/

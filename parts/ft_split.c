@@ -10,13 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
 int	ft_word_count(char const *s, char c)
 {
-	int i;
-	int counter;
+	int	i;
+	int	counter;
 
 	i = 0;
 	counter = 0;
@@ -24,10 +23,8 @@ int	ft_word_count(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-
 		if (s[i])
 			counter++;
-
 		while (s[i] != c && s[i] != '\0')
 			i++;
 	}
@@ -36,9 +33,9 @@ int	ft_word_count(char const *s, char c)
 
 char	**split_add(char const *s, char c, char **splited)
 {
-	int i;
-	int j;
-	int save_i;
+	int	i;
+	int	j;
+	int	save_i;
 
 	i = 0;
 	j = 0;
@@ -47,7 +44,7 @@ char	**split_add(char const *s, char c, char **splited)
 		while (s[i] == c)
 			i++;
 		if (s[i] == '\0')
-			break;
+			break ;
 		save_i = i;
 		while (s[i] != c && s[i] != '\0')
 			i++;
@@ -68,33 +65,12 @@ char	**split_add(char const *s, char c, char **splited)
 	return (splited);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **splited;
+	char	**splited;
 
-	splited = malloc((sizeof(char *)) * (ft_word_count(s , c) + 1));	// char pointerlık yer ayırıyor
-	if(!splited)
+	splited = malloc((sizeof(char *)) * (ft_word_count(s, c) + 1));
+	if (!splited)
 		return (NULL);
 	return (split_add(s, c, splited));
 }
-
-
-// #include <stdio.h>
-
-// int main(int argc, char const *argv[])
-// {
-// 	char **result_array;
-
-// 	result_array = ft_split("      ala   bla    lab     ", ' ');
-
-// 	// array yazdırma döngüsü
-// 	int i = 0;
-// 	while (result_array[i]) {
-// 		if (result_array[i+1])
-// 			printf("index: [%d] -> %s\n" ,i, result_array[i]);
-// 			free(result_array[i]);
-// 		i++;
-// 	}
-// 	free(result_array);
-// 	return 0;
-// }
