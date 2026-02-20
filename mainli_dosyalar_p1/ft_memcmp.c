@@ -1,4 +1,4 @@
- #include "libft.h
+ #include "libft.h"
 //İki bellek bloğunu (s1 ve s2) ilk n byte boyunca karşılaştırır.
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)

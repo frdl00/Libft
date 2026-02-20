@@ -30,3 +30,10 @@ int main()
     char *a = ft_strchr(s, x);
     printf("%s\n", a);
 }
+
+/* TEST
+ft_strchr(0x62bcb79fb020: "teste", 1024: '\0'):
+expected: 0x62bcb79fb025
+yours: (nil)
+
+*/

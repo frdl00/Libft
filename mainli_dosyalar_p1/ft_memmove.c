@@ -1,6 +1,6 @@
 #include "libft.h"
 
-//src yi dst nin sonuna n byte kadar kopyalar
+//src yi dst nin sonundan başlayarak n byte kadar kopyalar
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
     size_t i;
