@@ -21,15 +21,15 @@ char *ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-#include <stdio.h>
-int main()
-{
-    char *s = "Hello World";
-    char x = 'l';
+// #include <stdio.h>
+// int main()
+// {
+//     char *s = "Hello World";
+//     char x = 'l';
 
-    char *a = ft_strchr(s, x);
-    printf("%s\n", a);
-}
+//     char *a = ft_strchr(s, x);
+//     printf("%s\n", a);
+// }
 
 /* TEST
 ft_strchr(0x62bcb79fb020: "teste", 1024: '\0'):
@@ -37,3 +37,13 @@ expected: 0x62bcb79fb025
 yours: (nil)
 
 */
+#include <stdio.h>
+
+int main()
+{
+	char *chr = "";
+	char *rslt = ft_strchr(chr, 'd');
+	printf("%ss", rslt);
+}
+
+//tik

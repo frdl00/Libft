@@ -26,12 +26,24 @@ ft_memcpy ve ft_memmove arasındaki farkın ne olduğunu öğrenirsen
 zaten egzersizi anlamış olursun
 */
 
-#include <stdio.h>
-int main(void)
-{
-    char bla[] = "bu bilgisayarı beyinsizin teki kullanıyor.";
-    char alb[] = "bu bilgisayarı akıllının teki kullanıyor.";
-    char *result = (char *)ft_memmove(bla, alb, 20);
-    printf("%s", result);
-    
-}
+// #include <stdio.h>
+// int main(void)
+// {
+//     char bla[] = "bu bilgisayarı beyinsizin teki kullanıyor.";
+//     char alb[] = "bu bilgisayarı akıllının teki kullanıyor.";
+//     char *result = (char *)ft_memmove(bla, alb, 20);
+//     printf("%s", result);
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     char dst[] = "selamyemekaçım";
+//     char src[] = "kopyalama";
+
+//     char *rslt = (char *)ft_memmove(dst, src, 9);
+//     printf("%s", rslt);
+// }
+
+//tik

@@ -15,21 +15,34 @@ void *ft_memchr(const void *s, int c, size_t n)
     return NULL;
 }
 
+// #include <stdio.h>
+// int main(void)
+// {
+//     char bla[] = "bu  bilgisayarı beyisizin teki kullanıyor";
+//     char alb = 'u';
+//     printf("%s\n", (char *)ft_memchr(bla, alb, 15));
+
+
+//     // int arr[] = {1, 3, 2, 5, 6};
+//     // char eleman = 3;
+//     // int *result = (int *)ft_memchr(arr, eleman, 5);
+
+//     // printf("%d ", *result);
+//     // printf("%d ", *++result);
+//     // printf("%d ", *++result);
+//     // printf("%d ", *++result);
+// }
+
 #include <stdio.h>
-int main(void)
+int main()
 {
-    char bla[] = "bu  bilgisayarı beyisizin teki kullanıyor";
-    char alb = 'u';
-    printf("%s\n", (char *)ft_memchr(bla, alb, 15));
 
+    char *arr = "asdfgfggndfn";
+    char *rslt = ft_memchr(arr, 'g', 5);
 
-    // int arr[] = {1, 3, 2, 5, 6};
-    // char eleman = 3;
-    // int *result = (int *)ft_memchr(arr, eleman, 5);
-
-    // printf("%d ", *result);
-    // printf("%d ", *++result);
-    // printf("%d ", *++result);
-    // printf("%d ", *++result);
+    if(rslt)
+        printf("bulundu: %s", rslt);
+    else
+        printf("bulunmadı");
 }
-
+//tik

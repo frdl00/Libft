@@ -18,13 +18,27 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     return 0;
 }
 
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     char bla[] = "bu bilgisayarı beyinsizin teki kullanıyor.";
+//     char alb[]  = "bu bilgisayarı akıllının teki kullanıyor.";
+//     int result = ft_memcmp(bla, alb, 20);
+//     printf("%d", result);
+    
+// }
+
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    char bla[] = "bu bilgisayarı beyinsizin teki kullanıyor.";
-    char alb[]  = "bu bilgisayarı akıllının teki kullanıyor.";
-    int result = ft_memcmp(bla, alb, 20);
-    printf("%d", result);
-    
+    char *bla = "asdfghjkl";
+    char *alb = "asdf6543";
+
+    int rslt = ft_memcmp(bla,alb,5);
+    printf("%d", rslt);
+
 }
+
+//tik

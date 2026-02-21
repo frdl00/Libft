@@ -13,10 +13,20 @@ char *ft_strdup(const char *s)
 	return (cpy);
 }
 
-int main()
-{
-	char bla[] = "blabla";
-	char *son = ft_strdup(bla);
-	printf("%s", son);
+// int main()
+// {
+// 	char bla[] = "blabla";
+// 	char *son = ft_strdup(bla);
+// 	printf("%s", son);
+// }
 
-}
+// #include <stdio.h>
+
+// int main()
+// {
+// 	char *chr = "asdfghjk987654321";
+// 	char *rslt = ft_strdup(chr);
+// 	printf("%s", rslt);
+// }
+
+//tik

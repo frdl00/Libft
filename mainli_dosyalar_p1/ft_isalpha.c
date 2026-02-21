@@ -9,3 +9,9 @@ int ft_isalpha(int c)
     }
     return (0);
 }
+
+// #include <stdio.h>
+// int main() {
+
+//     printf("%d\n", ft_isalpha('c'));
+// }

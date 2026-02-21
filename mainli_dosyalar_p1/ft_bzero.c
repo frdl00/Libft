@@ -13,22 +13,26 @@ void ft_bzero(void *s, size_t n)
     }
 }
 
-#include <stdlib.h>
-#include <stdio.h>
+// #include <stdlib.h>
+// #include <stdio.h>
 
-int main(void)
-{
-    char arr[] = "asdfghjkli";
-    int i =0;
+// int main(void)
+// {
+//     char arr[] = "asdfghjkli";
+//     int i = 0;
 
-    ft_bzero(arr, 5);
+//     ft_bzero(arr, 5);
 
-    while(i < 10)
-    {
-        printf("%c", arr[i]);
-        i++;
-    }
-    printf("\n");
+//     while(i < 10)
+//     {
+//         printf("%c", arr[i]);
+//         i++;
+//     }
+//     printf("\n");
+//     return 0;
+// }
 
-    return 0;
-}
+//not : stringi yazdırırken tek seferde print edemezsin çünkü C de string \0 karakterine kadar yazdırılır.
+//o yüzden karakterleri tek tek yazdrıman lazım
+
+//tik

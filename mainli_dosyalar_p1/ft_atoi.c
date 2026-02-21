@@ -38,15 +38,17 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int main(void)
-{
-	const char bla[] = "-434a56";
-	int alb = ft_atoi(bla);
-	int alb2 = atoi(bla);
+// int main(void)
+// {
+// 	const char bla[] = "-434a56";
+// 	int alb = ft_atoi(bla);
+// 	int alb2 = atoi(bla);
 
-	printf("%d\n", alb);
-	printf("%d\n", alb2);
-}
+// 	printf("%d\n", alb);
+// 	printf("%d\n", alb2);
+// }
+
+//tik

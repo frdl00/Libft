@@ -7,3 +7,12 @@ int ft_isprint(int c)
     }
     return (0);
 }
+
+#include <stdio.h>
+
+int main() 
+{
+    printf("%d\n", ft_isprint('\0'));
+}
+
+//tik

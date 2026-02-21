@@ -49,14 +49,24 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 //     printf("%s\n", a);
 // }
 
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+//     char bla[10] = "asdfgh";
+//     char alb[] = "qwerty";
+
+//     size_t deneme = ft_strlcat(bla, alb, 10);
+//     printf("%ld\n", deneme);
+// }
+
 #include <stdio.h>
-#include <string.h>
 
 int main()
 {
-    char bla[10] = "asdfgh";
-    char alb[] = "qwerty";
-
-    size_t deneme = ft_strlcat(bla, alb, 10);
-    printf("%ld\n", deneme);
+	char *chr = "";
+    char *chrr = "";
+	char *rslt = ft_strchr(chr, 'd');
+	printf("%s", rslt);
 }
